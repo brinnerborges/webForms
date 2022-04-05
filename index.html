@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Forms</title>
+</head>
+
+<body>
+    <h1>SISTEMA DE GESTÃO ACADÊMICA</h1>
+    <fieldset>
+        <legend>Manutenção de Usuários no Sistema Interno</legend>
+        <form action="insertUser.php" method="post">
+            <label for="txt_email">Login:</label>
+            <input type="email" name="txt_email" id="txt_email" ; placeholder="Escreva seu email">
+            <br><br>
+            <label for="">Senha:</label>
+            <input type="password" name="Senha" id="txt_senha" required placeholder="Escreva sua senha">
+            <br><br>
+            <label for="estadoCivil"> Status:</label>
+            <select name="ddlestadocivil" id="ddlestadocivil">
+                <option value="A">Ativo</option>
+                <option selected value="I">Inativo</option>
+            </select>
+            <br><br>
+            <label for="genero">Tipo:</label>
+            <input type="radio" name="tipo" id="tipo" value="T"> Técnico
+            <input type="radio" name="genero" id="genero" value="P"> Professor
+            <input type="radio" name="genero" id="genero" checked value="A"> Aluno
+            <br><br>
+            <label for="date">Data de criação:</label>
+            <input type="date" name="date" id="date">
+            <br><br>
+            <label for="genero">Perfil:</label>
+            <input type="radio" name="tipo" id="tipo" value="C" checked> Convidado
+            <input type="radio" name="genero" id="genero" value="A"> Administrador
+            <br><br>
+            <label for="txtObs">Observações: </label>
+            <textarea name="txtObs" id="txtObs" cols="30" rows="5" placeholder="informa uma observação"></textarea>
+            <br><br>
+            <label for="modulo">Módulos</label>
+            <input type="checkbox" name="compras" id="compras"> Compras
+            <input type="checkbox" name="biblioteca" id="biblioteca"> Biblioteca
+            <input type="checkbox" name="academico" id="academico"> Acadêmico
+            <input type="checkbox" name="documentacao" id="documentacao"> Documentação
+            <input type="checkbox" name="recursoshumanos" id="recursoshumanos"> Recursos Humanos
+            <br><br>
+            <input type="submit" value="Cadastrar">
+            <input type="reset" value="Excluir">
+        </form>
+    </fieldset>
+
+    <h2>TABELA DE SERVIÇOS MECÂNICOS</h2>
+    <table>
+        <tr>
+            <th colspan="5">Registro de Alunos</th>
+        </tr>
+        <tr>
+            <th rowspan="5">Nacionais</th>
+            <th>Veículos</th>
+            <th>Serviço</th>
+            <th>Tempo Previsto</th>
+            <th>Valor</th>
+        </tr>
+        <tr>
+            <td>Caminhonete S10</td>
+            <td>Suspensão</td>
+            <td>3 horas e 25 minutos</td>
+            <td>350,00</td>
+        </tr>
+        <tr>
+            <td>Caminhonete Ranger</td>
+            <td>Freio</td>
+            <td>3 horas e 45 minutos</td>
+            <td>200,00</td>
+        </tr>
+        <tr>
+            <td>Caminhonete Hilux</td>
+            <td>Troca de Bateria</td>
+            <td>30 minutos</td>
+            <td>25,00</td>
+        </tr>
+        <tr>
+            <td>Caminhonete D10</td>
+            <td>Alinhamento</td>
+            <td>1 hora e 45 minutos</td>
+            <td>220,00</td>
+        </tr>
+    </table>
+</body>
+
+</html>
